@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body style="display: flex; background-color: black; text-align: center; justify-content: center; font-family: Arial, sans-serif;">
+    <div id="mensagem" style="width: 50%;font-size:22px; color:green; text-align:center; margin-top: 200px; box-shadow: 5px 5px 5px 5px red; padding: 2%;">
+    </div>
+</body>
+<script>
+const frases = [
+    "🌟 VOCÊ É ESPECIAL PARA ALGUÉM! 🌟",
+    "💪 Nunca desista dos seus sonhos.",
+    "💖 Seu valor é único.",
+    "🌈 Cada dia é uma nova chance.",
+    "🙌 Você é mais forte do que imagina.",
+    "✨ Continue, o melhor ainda está por vir!"
+];
+
+let i = 0;
+function mostrarFrase() {
+    if (i < frases.length) {
+        document.getElementById("mensagem").innerHTML += frases[i] + "<br><br>";
+        i++;
+        setTimeout(mostrarFrase, 2000);
+    }
+}
+
+mostrarFrase();
+</script>
+</html>
